@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS CALCULATOR 10</title>
+    </head>
+    <style>
+        body{margin: 0;
+        padding: 0;}
+        #header{width: 100%;
+        height: 150px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+        #forms{width: 25% 20px;
+        height: 150px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+        #buttons{width: 25% 20px;
+        height: 120px;
+        background-color:greenyellow;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+            }
+            #result{width: 25% 20px;
+        height: 120px;
+        background-color: black;
+        color: blanchedalmond;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+    </style>
+    <body>
+        <div id="header">
+            <div id="logo">
+               <h1> JS CALCULATOR </h1>
+            </div>
+        </div>
+        <div id="forms">
+            <input type="number" id="num1" placeholder="NUMBER 1">
+            <input type="number" id="num2" placeholder="NUMBER 2"></div>
+           <div id="buttons">
+            <button id="add"><h2>add</h2></button>
+            <button id="sub"><h2>sub</h2></button>
+            <button id="mul"><h2>mul</h2></button>
+            <button id="div"><h2>div</h2></button>
+            <button id="MOD"><h2>MOD</h2></button>
+            <button id="clear"><h2>clear</h2></button>
+            </div>
+            <div id="result">
+                <input type="number" id="result" placeholder="RESULT"></div>
+        
+       
+    </body>
+    <script>
+        var num1=document.getElementById("num1");
+        var num2=document.getElementById("num2");
+        var add=document.getElementById("add");
+        var sub=document.getElementById("sub");
+        var  mul=document.getElementById("mul");
+        var div=document.getElementById("div");
+        var result=document.getElementById("result");
+        //add
+        add.addEventListener("click",function(e){
+            e.preventDefault();
+            var z=parseInt(num1.value)+parseInt(num2.value);
+            result.innerHTML=z;
+            num1.value="";
+            num2.value="";
+        })
+        sub.addEventListener("click",function(e){
+            e.preventDefault();
+            var z=parseInt(num1.value)-parseInt(num2.value);
+            result.innerHTML=z;
+            num1.value="";
+            num2.value="";
+            
+        })
+        mul.addEventListener("click",function(e){
+            e.preventDefault();
+            var z=parseInt(num1.value)*parseInt(num2.value);
+            result.innerHTML=z;
+            num1.value="";
+            num2.value="";
+        })
+    div.addEventListener("click",function(e){
+            e.preventDefault();
+            var z=parseInt(num1.value)/parseInt(num2.value);
+            result.innerHTML=z;
+            num1.value="";
+            num2.value="";
+        })
+        MOD.addEventListener("click",function(e){
+            e.preventDefault();
+            var z=parseInt(num1.value)%parseInt(num2.value)
+            result.innerHTML=z;
+            num1.value="";
+            num2.value="";
+        })
+        clear.addEventListener("click",function(e){
+            e.preventDefault();
+             result="";
+             num1.value="";
+             num2.value="";
+        })
+    </script>
+</html>
